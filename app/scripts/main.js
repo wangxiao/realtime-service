@@ -1,2 +1,20 @@
-/* jshint devel:true */
-console.log('\'Allo \'Allo!');
+/**
+ * @author wangxiao
+ * 
+ * 每位工程师都有保持代码优雅的义务
+ * Each engineer has a duty to keep the code elegant
+ */
+
+angular.module('RealtimeApp', 
+['ngMaterial', 'ngRoute'])
+.config(['$routeProvider',
+function ($routeProvider) {
+$routeProvider
+    .when('/service', {
+        templateUrl: 'views/service.html',
+        controller: 'serviceCtrl'
+    })
+    .otherwise({
+        redirectTo: '/service'
+    });
+}]);

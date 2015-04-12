@@ -1,0 +1,70 @@
+.lc-service {
+    $borderColor: #c6c6c6;
+    min-width: 320px;
+    height: 100%;
+    position: relative;
+    margin: 0px auto;
+    .logo {
+        @include image('logo.png');
+        height: 160px;
+        background-color: #2C97E8;
+        border-radius: $borderRadius;
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        top: 15px;
+    }
+    .chat {
+        border-radius: $borderRadius;
+        border: 1px solid $borderColor;
+        background-color: #fff;
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        top: 190px;
+        bottom: 35px;
+        .input {
+            width: 100%;
+            height: 48px;
+            padding-top: 2px;
+            border-top: 1px solid $borderColor;
+            position: absolute;
+            bottom: 0px;
+            background-color: #efefef;
+            border-radius: 0px 0px $borderRadius $borderRadius;
+            input {
+                width: 92%;
+                padding: 8px 5px;
+                margin: 3px auto 0px auto;
+                display: block;
+            }
+        }
+        .chat-wall {
+            ol {
+                margin: 10px 0px;
+                line-height: 1.6;
+                padding: 0px 10px;
+            }
+            .item {
+                background-color: #e7e7e7;
+                border-radius: $borderRadius;
+                border: 1px solid $borderColor;
+                padding: 10px;
+                margin-bottom: 15px;
+                &.self {
+                    background-color: #ADD7FE;
+                    border-color: #99ADDB;
+                }
+                &.other {
+                }
+            }
+        }
+    }
+    .footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        color: #888;
+    }
+}
