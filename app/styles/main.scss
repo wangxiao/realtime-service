@@ -2,6 +2,7 @@
 // endbower
 
 $borderRadius: 8px;
+$standardBlue: #2C97E8;
 
 body {
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
@@ -19,6 +20,14 @@ ol {
     }
 }
 
+a {
+    color: $standardBlue;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .all-view {
     position: absolute;
     top: 0px;
@@ -26,6 +35,10 @@ ol {
     bottom: 0px;
     left: 0px;
     overflow: auto;
+}
+
+.button {
+    height: 40px;
 }
 
 @mixin image($name) {
